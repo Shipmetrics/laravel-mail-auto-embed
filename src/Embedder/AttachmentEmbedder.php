@@ -28,8 +28,9 @@ class AttachmentEmbedder extends Embedder
      */
     public function fromUrl($url)
     {
+        //Skipping Check to allow absolute URLS
         return $this->embed(
-            Swift_Image::fromPath($filePath)
+            Swift_Image::fromPath($url)
         );
     }
 
